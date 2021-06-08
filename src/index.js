@@ -3,18 +3,20 @@ import ReactDOM from "react-dom";
 // import "./index.css";
 // import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+
+import { Provider } from "react-redux";
 import tasksReducer from "./reducers/tasks";
-import TodoApp from "./components/TodoApp";
+import TodoApp from "./containers/TodoApp";
 import { createStore } from "redux";
 
 const store = createStore(tasksReducer);
 
-function renderApp(store) {
-  ReactDOM.render(<TodoApp store={store} />, document.getElementById("root"));
-}
-
-store.subscribe(() => renderApp(store));
-renderApp(store);
+ReactDOM.render(
+  <Provider store={store}>
+    <TodoApp />
+  </Provider>,
+  document.getElementById("root")
+);
 
 // ReactDOM.render(
 //   <React.StrictMode>
