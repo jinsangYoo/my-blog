@@ -3,10 +3,10 @@ import TodoApp from "../components/TodoApp";
 import { inputTask, addTask } from "../actions/tasks";
 import { push } from "react-router-redux";
 
-function mapStateToProps({ tasks }) {
+function mapStateToProps(state) {
   return {
-    task: tasks.task,
-    tasks: tasks.tasks,
+    task: state.tasks.task,
+    tasks: state.tasks.tasks,
   };
 }
 
