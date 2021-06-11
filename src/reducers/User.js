@@ -3,8 +3,9 @@ const getUser = (response) => {
   const itemLength = response.data.length;
   for (let index = 0; index < itemLength; index++) {
     const item = response.data[index];
+    // console.log(`item.name: ${item.name}`);
     repos.push({
-      name: item.Name,
+      name: item.name,
       description: item.description,
       url: item.html_url,
     });
@@ -13,7 +14,7 @@ const getUser = (response) => {
 };
 
 const initialState = {
-  user: undefined,
+  category: undefined,
   repos: undefined,
   error: false,
 };
@@ -22,7 +23,7 @@ export default (state = initialState, action) => {
   switch (action.type) {
     case "START_REQUEST":
       return {
-        user: action.payload.user,
+        category: action.payload.category,
         repos: undefined,
         error: false,
       };

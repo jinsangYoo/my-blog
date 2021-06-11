@@ -4,6 +4,10 @@ import * as actions from "../actions/User";
 
 const mapStateToProps = (state, ownProps) => ({
   user: ownProps.user,
+
+  category: state.User.category,
+  repos: state.User.repos,
+  error: state.User.error,
 });
 
 const mapDispatchToProps = (dispatch) => ({
