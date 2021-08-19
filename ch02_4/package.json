@@ -1,5 +1,5 @@
 {
-  "name": "ch02_3",
+  "name": "com.acecounter.android.acetmtest",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -10,24 +10,26 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
   "dependencies": {
-    "faker": "^5.5.3",
+    "@react-native-async-storage/async-storage": "^1.15.6",
+    "@react-native-community/netinfo": "^6.0.0",
     "react": "17.0.2",
-    "react-native": "0.64.2"
+    "react-native": "0.65.0",
+    "react-native-device-info": "^8.3.0",
+    "reactslimer": "^0.0.217"
   },
   "devDependencies": {
-    "@babel/core": "^7.14.6",
-    "@babel/runtime": "^7.14.6",
-    "@react-native-community/eslint-config": "^2.0.0",
-    "@types/faker": "^5.5.6",
-    "@types/jest": "^26.0.23",
-    "@types/react-native": "^0.64.10",
+    "@babel/core": "^7.15.0",
+    "@babel/runtime": "^7.15.3",
+    "@react-native-community/eslint-config": "^3.0.0",
+    "@types/jest": "^27.0.1",
+    "@types/react-native": "^0.64.13",
     "@types/react-test-renderer": "^17.0.1",
-    "babel-jest": "^27.0.2",
-    "eslint": "^7.28.0",
-    "jest": "^27.0.4",
-    "metro-react-native-babel-preset": "^0.66.0",
+    "babel-jest": "^27.0.6",
+    "eslint": "^7.32.0",
+    "jest": "^27.0.6",
+    "metro-react-native-babel-preset": "^0.66.2",
     "react-test-renderer": "17.0.2",
-    "typescript": "^4.3.2"
+    "typescript": "^4.3.5"
   },
   "resolutions": {
     "@types/react": "^17"
