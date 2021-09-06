@@ -13,6 +13,7 @@
 
  import {
    SafeAreaView,
+   ScrollView,
    Alert, Button
  } from 'react-native';
  import { TouchableHighlight, TouchableOpacity, Text } from 'react-native';
@@ -724,26 +725,27 @@ export function onlyLetteringAtStartIndex(value: string): string {
   // LogBox.ignoreAllLogs()
    return (
      <SafeAreaView>
-       {/* <Button title="home" onPress={onPress} /> */}
+       <ScrollView>
+       <Button title="home" onPress={onPress} />
        <Button title="SDK 초기화" onPress={onPressInitSDK} />
        <Button title="SDK + CB 초기화" onPress={onPressInitSDKWithCB} />
-       {/* <Button title="SDK + CB 초기화 x5" onPress={onPressInitSDKWithCBx5} /> */}
+       <Button title="SDK + CB 초기화 x5" onPress={onPressInitSDKWithCBx5} />
        <Button title="SDK + Promise 초기화" onPress={onPressInitSDKWithPromise} />
-       {/* <Button title="Send + Promise 초기화 x5" onPress={onPressInitSDKWithPromisex5} /> */}
-       {/* <Button title="SDK Details" onPress={onPressSDKDetails} /> */}
-       {/* <Button title="Send PL" onPress={onPressSend} /> */}
+       <Button title="Send + Promise 초기화 x5" onPress={onPressInitSDKWithPromisex5} />
+       <Button title="SDK Details" onPress={onPressSDKDetails} />
+       <Button title="Send PL" onPress={onPressSend} />
        <Button title="Send PL + CB" onPress={onPressSendWithCB} />
        <Button title="Send PL + Promise" onPress={onPressSendWithPromise} />
-       {/* <Button title="Send PL + CB x5" onPress={onPressSendWithCBx5} /> */}
-       {/* <Button title="Send PL + Promise x5" onPress={onPressSendWithPromisex5} /> */}
-       {/* <Button title="Send Buy + CB" onPress={onPressSendBuyWithCB} />
+       <Button title="Send PL + CB x5" onPress={onPressSendWithCBx5} />
+       <Button title="Send PL + Promise x5" onPress={onPressSendWithPromisex5} />
+       <Button title="Send Buy + CB" onPress={onPressSendBuyWithCB} />
        <Button title="Send Buy + Promise" onPress={onPressSendBuyWithPromise} />
        <Button title="Send AddCart + CB" onPress={onPressSendAddCartWithCB} />
        <Button title="Send AddCart + Promise" onPress={onPressSendAddCartWithPromise} />
        <Button title="Send DelCart + CB" onPress={onPressSendDelCartWithCB} />
        <Button title="Send DelCart + Promise" onPress={onPressSendDelCartWithPromise} />
        <Button title="Send AppearProduct + CB" onPress={onPressSendAppearProductWithCB} />
-       <Button title="Send AppearProduct + Promise" onPress={onPressSendAppearProductWithPromise} /> */}
+       <Button title="Send AppearProduct + Promise" onPress={onPressSendAppearProductWithPromise} />
        <Button title="Send Link + CB" onPress={onPressSendLinkWithCB} />
        <Button title="Send Link + Promise" onPress={onPressSendLinkWithPromise} />
        <Button title="Send Tel + CB" onPress={onPressSendTelWithCB} />
@@ -768,6 +770,7 @@ export function onlyLetteringAtStartIndex(value: string): string {
        onFocus={() => console.log('onFocus')}
       onBlur={() => console.log("onBlur")}
       onEndEditing={() => console.log('onEndEditing')} />
+      </ScrollView>
     </SafeAreaView>
    );
  };
