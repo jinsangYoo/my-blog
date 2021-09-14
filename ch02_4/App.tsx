@@ -727,37 +727,37 @@ export function onlyLetteringAtStartIndex(value: string): string {
      <SafeAreaView>
        <ScrollView>
        <Button title="home" onPress={onPress} />
-       <Button title="SDK 초기화" onPress={onPressInitSDK} />
+       <Button title="SDK 초기화" color='navy' onPress={onPressInitSDK} />
        <Button title="SDK + CB 초기화" onPress={onPressInitSDKWithCB} />
-       <Button title="SDK + CB 초기화 x5" onPress={onPressInitSDKWithCBx5} />
+       <Button title="SDK + CB 초기화 x5" color='navy' onPress={onPressInitSDKWithCBx5} />
        <Button title="SDK + Promise 초기화" onPress={onPressInitSDKWithPromise} />
-       <Button title="Send + Promise 초기화 x5" onPress={onPressInitSDKWithPromisex5} />
+       <Button title="Send + Promise 초기화 x5" color='navy' onPress={onPressInitSDKWithPromisex5} />
        <Button title="SDK Details" onPress={onPressSDKDetails} />
-       <Button title="Send PL" onPress={onPressSend} />
+       <Button title="Send PL" color='navy' onPress={onPressSend} />
        <Button title="Send PL + CB" onPress={onPressSendWithCB} />
-       <Button title="Send PL + Promise" onPress={onPressSendWithPromise} />
+       <Button title="Send PL + Promise" color='navy' onPress={onPressSendWithPromise} />
        <Button title="Send PL + CB x5" onPress={onPressSendWithCBx5} />
-       <Button title="Send PL + Promise x5" onPress={onPressSendWithPromisex5} />
+       <Button title="Send PL + Promise x5" color='navy' onPress={onPressSendWithPromisex5} />
        <Button title="Send Buy + CB" onPress={onPressSendBuyWithCB} />
-       <Button title="Send Buy + Promise" onPress={onPressSendBuyWithPromise} />
+       <Button title="Send Buy + Promise" color='navy' onPress={onPressSendBuyWithPromise} />
        <Button title="Send AddCart + CB" onPress={onPressSendAddCartWithCB} />
-       <Button title="Send AddCart + Promise" onPress={onPressSendAddCartWithPromise} />
+       <Button title="Send AddCart + Promise" color='navy' onPress={onPressSendAddCartWithPromise} />
        <Button title="Send DelCart + CB" onPress={onPressSendDelCartWithCB} />
-       <Button title="Send DelCart + Promise" onPress={onPressSendDelCartWithPromise} />
+       <Button title="Send DelCart + Promise" color='navy' onPress={onPressSendDelCartWithPromise} />
        <Button title="Send AppearProduct + CB" onPress={onPressSendAppearProductWithCB} />
-       <Button title="Send AppearProduct + Promise" onPress={onPressSendAppearProductWithPromise} />
+       <Button title="Send AppearProduct + Promise" color='navy' onPress={onPressSendAppearProductWithPromise} />
        <Button title="Send Link + CB" onPress={onPressSendLinkWithCB} />
-       <Button title="Send Link + Promise" onPress={onPressSendLinkWithPromise} />
+       <Button title="Send Link + Promise" color='navy' onPress={onPressSendLinkWithPromise} />
        <Button title="Send Tel + CB" onPress={onPressSendTelWithCB} />
-       <Button title="Send Tel + Promise" onPress={onPressSendTelWithPromise} />
+       <Button title="Send Tel + Promise" color='navy' onPress={onPressSendTelWithPromise} />
        <Button title="Send Join + CB" onPress={onPressSendJoinWithCB} />
-       <Button title="Send Join + Promise" onPress={onPressSendJoinWithPromise} />
+       <Button title="Send Join + Promise" color='navy' onPress={onPressSendJoinWithPromise} />
        <Button title="Send Login + CB" onPress={onPressSendLoginWithCB} />
-       <Button title="Send Login + Promise" onPress={onPressSendLoginWithPromise} />
+       <Button title="Send Login + Promise" color='navy' onPress={onPressSendLoginWithPromise} />
        <Button title="Send Leave + CB" onPress={onPressSendLeaveWithCB} />
-       <Button title="Send Leave + Promise" onPress={onPressSendLeaveWithPromise} />
+       <Button title="Send Leave + Promise" color='navy' onPress={onPressSendLeaveWithPromise} />
        <Button title="Send Search + CB" onPress={onPressSendSearchWithCB} />
-       <Button title="Send Search + Promise" onPress={onPressSendSearchWithPromise} />
+       <Button title="Send Search + Promise" color='navy' onPress={onPressSendSearchWithPromise} />
        <TouchableOpacity onPress={onPress}>
          
        </TouchableOpacity>
@@ -768,8 +768,8 @@ export function onlyLetteringAtStartIndex(value: string): string {
        placeholder="enter your name"
        onChangeText={(text:string) => console.log(text)}
        onFocus={() => console.log('onFocus')}
-      onBlur={() => console.log("onBlur")}
-      onEndEditing={() => console.log('onEndEditing')} />
+       onBlur={() => console.log("onBlur")}
+       onEndEditing={() => console.log('onEndEditing')} />
       </ScrollView>
     </SafeAreaView>
    );

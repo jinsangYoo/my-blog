@@ -8,18 +8,18 @@
  * @format
  */
 
- import React from 'react';
- import {
-   SafeAreaView,
-   Text,
- } from 'react-native';
+import React from 'react';
+import {
+  SafeAreaView,
+  Text,
+} from 'react-native';
 
- const App = () => {
-   return (
-     <SafeAreaView>
-       <Text>Hello JSX world!!</Text>
-     </SafeAreaView>
-   );
- };
+const App = () => {
+  return (
+    <SafeAreaView>
+      <Text>Hello JSX world!</Text>
+    </SafeAreaView>
+  );
+};
 
- export default App;
+export default App;
