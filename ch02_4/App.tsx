@@ -10,6 +10,7 @@
 
  import React from 'react';
  import {Platform, LogBox} from 'react-native'
+ import messaging from '@react-native-firebase/messaging';
 
  import {
    SafeAreaView,
@@ -19,6 +20,7 @@
  import { TouchableHighlight, TouchableOpacity, Text } from 'react-native';
  import { TextInput } from 'react-native'
 import { AceConfiguration, ACParams, ACS, ACEResponseToCaller, ACProduct, ACEGender, ACEMaritalStatus } from 'reactslimer';
+import CloudMessaging from './Messaging';
 
 function getGCode(): string {
   if (Platform.OS == 'ios') {
@@ -721,11 +723,38 @@ export function onlyLetteringAtStartIndex(value: string): string {
   }
 
  const App = () => {
+  // CloudMessaging()
+
+  // Register background handler, Background, Quit 상태일 경우
+messaging().setBackgroundMessageHandler(async remoteMessage => {
+  console.log(
+    'Message handled in the background!',
+    JSON.stringify(remoteMessage, null, 2),
+  );
+
+  const params = ACParams.init(ACParams.TYPE.PUSH);
+  params.data = remoteMessage.data;
+  ACS.send(params);
+});
+
+  // Foreground 상태인 경우
+React.useEffect(() => {
+  onPressInitSDKWithCB()
+  const unsubscribe = messaging().onMessage(async remoteMessage => {
+    console.log('A new FCM message arrived on foreground!', JSON.stringify(remoteMessage, null, 2))
+    const params = ACParams.init(ACParams.TYPE.PUSH)
+    params.data = remoteMessage.data
+    ACS.send(params)
+  });
+  return unsubscribe;
+});
+
   console.log("reactslimer is ready.")
   // LogBox.ignoreAllLogs()
    return (
      <SafeAreaView>
        <ScrollView>
+         {/* <CloudMessaging /> */}
        <Button title="home" onPress={onPress} />
        <Button title="SDK 초기화" color='navy' onPress={onPressInitSDK} />
        <Button title="SDK + CB 초기화" onPress={onPressInitSDKWithCB} />

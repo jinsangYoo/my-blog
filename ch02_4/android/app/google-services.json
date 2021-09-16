@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "155026947591",
+    "firebase_url": "https://sampleforacsdk-d6ec2.firebaseio.com",
+    "project_id": "sampleforacsdk-d6ec2",
+    "storage_bucket": "sampleforacsdk-d6ec2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:155026947591:android:f9248dc14ddad4a62c34a2",
+        "android_client_info": {
+          "package_name": "com.acecounter.android.acetmtest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "155026947591-bnvvkadj8uhct376p9nstan8jj6d7eod.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBHQzgbERbZi-40xKURX4eHun0EAXn89Qs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "155026947591-bnvvkadj8uhct376p9nstan8jj6d7eod.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
