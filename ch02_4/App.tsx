@@ -722,6 +722,14 @@ export function onlyLetteringAtStartIndex(value: string): string {
     })
   }
 
+  function setManualAdvertisingIdentifier(): void {
+    const randomValue = getRandomIntInclusive(0, 9999999999999999).toString()
+    ACS.setAdvertisingIdentifier(randomValue)
+    const msg = `set manual AdvertisingIdentifier >${randomValue}<`
+    console.log(msg);
+    Alert.alert('알림', msg)
+  }
+
  const App = () => {
   // CloudMessaging()
 
@@ -740,6 +748,8 @@ messaging().setBackgroundMessageHandler(async remoteMessage => {
   // Foreground 상태인 경우
 React.useEffect(() => {
   onPressInitSDKWithCB()
+
+
   const unsubscribe = messaging().onMessage(async remoteMessage => {
     console.log('A new FCM message arrived on foreground!', JSON.stringify(remoteMessage, null, 2))
     const params = ACParams.init(ACParams.TYPE.PUSH)
@@ -787,6 +797,7 @@ React.useEffect(() => {
        <Button title="Send Leave + Promise" color='navy' onPress={onPressSendLeaveWithPromise} />
        <Button title="Send Search + CB" onPress={onPressSendSearchWithCB} />
        <Button title="Send Search + Promise" color='navy' onPress={onPressSendSearchWithPromise} />
+       <Button title="암의 광고식별자 설정" onPress={setManualAdvertisingIdentifier} />
        <TouchableOpacity onPress={onPress}>
          
        </TouchableOpacity>
